@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title><a href="/home">
+        <ion-icon color="danger" name="arrow-round-back"></ion-icon>
+      </a> Ejercicio 7</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="5">
+      </ion-col>
+      <ion-col>
+        <ion-input color="light" placeholder="€" type="number" clearInput [(ngModel)]="euros"
+        (keyup)="actualizaPesetas()"></ion-input>
+      </ion-col>
+      <ion-col size="5">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h1>{{ euros }} € = {{ pesetas }} <sub>ptas</sub></h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="5">
+      </ion-col>
+      <ion-col>
+        <ion-input color="light" placeholder="ptas" type="number" clearInput [(ngModel)]="pesetas"
+        (keyup)="actualizaEuros()"></ion-input>
+      </ion-col>
+      <ion-col size="5">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

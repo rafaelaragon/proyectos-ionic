@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title><a href="/home">
+        <ion-icon color="danger" name="arrow-round-back"></ion-icon>
+      </a> Ejercicio 5</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="2">
+        <ion-input color="light" placeholder="Mínimo" type="number" clearInput [(ngModel)]="min"></ion-input>
+      </ion-col>
+      <ion-col>
+
+      </ion-col>
+      <ion-col>
+        <ion-button color="light" shape="round" expand="block" fill="outline" (click)="aleatoriza()">
+          Aleatoriza
+        </ion-button>
+      </ion-col>
+      <ion-col>
+
+      </ion-col>
+      <ion-col size="2">
+        <ion-input color="light" placeholder="Máximo" type="number" clearInput [(ngModel)]="max"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h1> {{ aleatorio }}</h1>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

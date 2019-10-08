@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title><a href="/home">
+        <ion-icon color="danger" name="arrow-round-back"></ion-icon>
+      </a> Ejercicio 1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button color="light" shape="round" expand="full" fill="outline" (click)="muestraNombre()">
+    Muestra mi nombre
+  </ion-button>
+  <ion-button color="light" shape="round" expand="full" fill="outline" (click)="ocultaNombre()">
+    Oculta mi nombre
+  </ion-button>
+  <h1>{{ nombre }}</h1>
+</ion-content>

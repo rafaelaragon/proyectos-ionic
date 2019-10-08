@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title><a href="/home">
+        <ion-icon color="danger" name="arrow-round-back"></ion-icon>
+      </a> Ejercicio 4</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-input color="light" placeholder="Escribe tu nombre..." clearInput [(ngModel)]="nombre">
+    <ion-button color="light" shape="round" fill="outline" size="large" expand="full" (click)="saluda()">
+      Púlsame
+    </ion-button>
+  </ion-input>
+  <h1>{{ saludo }}</h1>
+</ion-content>
