@@ -1,0 +1,100 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>
+      Calculadora
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <!-- Resultado -->
+    <ion-row id="resultado">
+      <ion-col size="9"></ion-col>
+      <ion-col>
+        {{ result | number }}
+      </ion-col>
+    </ion-row>
+    <!-- Botones 1 -->
+    <ion-row>
+      <ion-col>
+        <ion-button color="dark" size="large" (click)="reset()">AC</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="dark" size="large" (click)="resetLast()">C</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="dark" size="large" (click)="clickOperator('%')">%</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="dark" size="large" (click)="clickOperator('/')">/</ion-button>
+      </ion-col>
+    </ion-row>
+    <!-- Botones 2 -->
+    <ion-row>
+      <ion-col>
+        <ion-button color="dark" size="large" (click)="clickNumber(7)">7</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="dark" size="large" (click)="clickNumber(8)">8</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="dark" size="large" (click)="clickNumber(9)">9</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="dark" size="large" (click)="clickOperator('*')">X</ion-button>
+      </ion-col>
+    </ion-row>
+    <!-- Botones 3 -->
+    <ion-row>
+      <ion-col>
+        <ion-button color="dark" size="large" (click)="clickNumber(4)">4</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="dark" size="large" (click)="clickNumber(5)">5</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="dark" size="large" (click)="clickNumber(6)">6</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="dark" size="large" (click)="clickOperator('-')">-</ion-button>
+      </ion-col>
+    </ion-row>
+    <!-- Botones 4 -->
+    <ion-row>
+      <ion-col>
+        <ion-button color="dark" size="large" (click)="clickNumber(1)">1</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="dark" size="large" (click)="clickNumber(2)">2</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="dark" size="large" (click)="clickNumber(3)">3</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="dark" size="large" (click)="clickOperator('+')">+</ion-button>
+      </ion-col>
+    </ion-row>
+    <!-- Botones 5 -->
+    <ion-row>
+      <ion-col>
+        <ion-button color="dark" size="large" (click)="plusMinus()">+/-</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="dark" size="large" (click)="clickNumber(0)">0</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="dark" size="large" (click)="setDecimal()">.</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="dark" size="large" (click)="calculate()">=</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="dark">
+    <ion-title>Rafael Aragón Rodríguez</ion-title>
+  </ion-toolbar>
+</ion-footer>
