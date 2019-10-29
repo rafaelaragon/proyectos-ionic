@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Películas</ion-title>
+    <ion-searchbar color="dark" showCancelButton="focus" debounce="1000" placeholder="Escribe..." [(ngModel)]="searchTerm"
+    (ionChange)="searchChanged()">
+  </ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label color="light">Tipo</ion-label>
+    <ion-select color="dark" [(ngModel)]="type" (ionChange)="searchChanged()">
+      <ion-select-option value="">Todos</ion-select-option>
+      <ion-select-option value="movie">Películas</ion-select-option>
+      <ion-select-option value="series">Series</ion-select-option>
+      <ion-select-option value="episode">Episodios</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-list>
+    <ion-item button [routerLink]="['/','movie',item.imdbID]" *ngFor="let item of (results | async)">
+      <ion-avatar slot="start">
+        <img [src]="item.Poster" *ngIf="item.Poster != 'N/A'">
+      </ion-avatar>
+      <ion-label text-wrap color="light">
+        <h3>{{item.Title}}</h3>
+        <h3>{{item.Year}}</h3>
+      </ion-label>
+      <ion-icon color="light" slot="end" name="videocam" *ngIf="item.Type == 'movie'"></ion-icon>
+      <ion-icon color="light" slot="end" name="tv" *ngIf="item.Type == 'series'"></ion-icon>
+      <ion-icon color="light" slot="end" name="logo-game-controller-b" *ngIf="item.Type == 'game'"></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="dark">
+    <ion-title>Rafael Aragón Rodríguez</ion-title>
+  </ion-toolbar>
+</ion-footer>

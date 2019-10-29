@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ item?.Genre }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding *ngIf="item">
+  <h1>{{ item.Title }}</h1>
+  <h2>{{ item.Year }}</h2>
+  <img *ngIf="item.Website && item.Website != 'N/A'" class="info-img" [src]="item.Poster">
+  <p>{{ item.Plot }}</p>
+  <ion-item lines="none">
+    <ion-icon color="light" slot="start" name="star"></ion-icon>
+    <ion-label>
+      {{ item.imdbRating }}
+    </ion-label>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-icon color="light" slot="start" name="clipboard"></ion-icon>
+    <ion-label>
+      {{ item.Director }}
+    </ion-label>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-icon color="light" slot="start" name="contact"></ion-icon>
+    <ion-label text-wrap>
+      {{ item.Actors }}
+    </ion-label>
+  </ion-item>
+  <ion-button expand="full" color="dark"
+  (click)="openWebsite()" *ngIf="item.Website && item.Website != 'N/A'">
+  
+  Ir a la página
+  </ion-button>
+</ion-content>

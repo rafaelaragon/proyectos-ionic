@@ -1,0 +1,36 @@
+ion-title  {
+    font-weight: bolder;
+    text-align: center;
+}
+
+ion-content {
+    --ion-background-color:#800000;
+    --color: #fff;
+}
+
+ion-button {
+    font-weight: bold;
+    margin: 3%;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bolder;
+}
+h2 {
+    text-align: center;
+    font-weight: bolder;
+}
+p {
+    padding: 6%;
+    text-align: justify;
+}
+ion-item {
+    --color: #fff;
+}
+img {
+    padding: 10vw;
+    padding-bottom: 5vw;
+    max-height: 40 vh;
+    object-fit: contain;
+}
