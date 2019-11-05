@@ -12,8 +12,8 @@
       <ion-col align="center">
         <ion-item>
           <ion-label>Metros</ion-label>
-          <ion-input color="light" placeholder="M" type="number" clearInput [(ngModel)]="metros"
-            (keyup)="metrosCentimetros()" (keyup)="metrosPulgadas()"></ion-input>
+          <ion-input color="light" placeholder="M" type="number" clearInput [(ngModel)]="metros" (keyup)="metrosA()">
+          </ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
@@ -22,7 +22,7 @@
         <ion-item>
           <ion-label>Centímetros</ion-label>
           <ion-input color="light" placeholder="Cm" type="number" clearInput [(ngModel)]="centimetros"
-          (keyup)="centimetrosMetros()" (keyup)="centimetrosPulgadas()"></ion-input>
+            (keyup)="centimetrosA()"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
@@ -31,7 +31,7 @@
         <ion-item>
           <ion-label>Pulgadas</ion-label>
           <ion-input color="light" placeholder="Inc" type="number" clearInput [(ngModel)]="pulgadas"
-          (keyup)="pulgadasMetros()" (keyup)="pulgadasCentimetros()"></ion-input>
+            (keyup)="pulgadasA()"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>

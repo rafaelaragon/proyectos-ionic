@@ -16,22 +16,16 @@ export class Ejercicio2Page implements OnInit {
   ngOnInit() {
   }
 
-  metrosCentimetros() {
+  metrosA() {
     this.centimetros = this.metros * 100;
-  }
-  metrosPulgadas() {
     this.pulgadas = Math.round(this.metros * 39.3701 * 100) / 100;
   }
-  centimetrosMetros() {
+  centimetrosA() {
     this.metros = Math.round(this.centimetros / 100 * 100) / 100;
-  }
-  centimetrosPulgadas() {
     this.pulgadas = Math.round(this.centimetros * 39.3701) / 100;
   }
-  pulgadasMetros() {
+  pulgadasA() {
     this.metros = Math.round(this.pulgadas * 0.0254 * 100) / 100;
-  }
-  pulgadasCentimetros() {
     this.centimetros = Math.round(this.pulgadas * 2.54 * 100) / 100;
   }
 
