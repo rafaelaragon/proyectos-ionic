@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title><a href="/home">
+        <ion-icon color="danger" name="arrow-round-back"></ion-icon>
+      </a> Ejercicio 2</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col align="center">
+        <ion-item>
+          <ion-label>Metros</ion-label>
+          <ion-input color="light" placeholder="M" type="number" clearInput [(ngModel)]="metros"
+            (keyup)="metrosCentimetros()" (keyup)="metrosPulgadas()"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col align="center">
+        <ion-item>
+          <ion-label>Centímetros</ion-label>
+          <ion-input color="light" placeholder="Cm" type="number" clearInput [(ngModel)]="centimetros"
+          (keyup)="centimetrosMetros()" (keyup)="centimetrosPulgadas()"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col align="center">
+        <ion-item>
+          <ion-label>Pulgadas</ion-label>
+          <ion-input color="light" placeholder="Inc" type="number" clearInput [(ngModel)]="pulgadas"
+          (keyup)="pulgadasMetros()" (keyup)="pulgadasCentimetros()"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

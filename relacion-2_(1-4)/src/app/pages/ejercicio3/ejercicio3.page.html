@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Ejercicio 3</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-text-center">
+    <ion-row>
+      <ion-col size="3">Nombre</ion-col>
+      <ion-col size="3">Precio</ion-col>
+      <ion-col size="3">Cantidad</ion-col>
+      <ion-col size="3">Subtotal</ion-col>
+    </ion-row>
+    <ion-item-divider>
+      </ion-item-divider>
+    <ion-row *ngFor="let item of items">
+      <ion-col size="3">{{ item.item }}</ion-col>
+      <ion-col size="3">{{ item.price }} €</ion-col>
+      <ion-col size="3">{{ item.quantity }}</ion-col>
+      <ion-col size="3">{{ item.subtotal }} €</ion-col>
+    </ion-row>
+    <ion-item-divider></ion-item-divider>
+    <ion-row>
+      <ion-col size="3">Total:</ion-col>
+      <ion-col size="6"></ion-col>
+      <ion-col size="3">{{ this.total }} €</ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
