@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>
+      Películas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-text-center">
+  <ion-list>
+    <ion-item-divider></ion-item-divider>
+    <div *ngFor="let f of films">
+      <ion-item>
+        <div (click)="muestraDetalles(f.title)">
+          <h1>{{ f.title }}</h1>
+          <ion-img src="assets/img/{{ f.cover }}"></ion-img>
+          <div *ngIf="f.isClicked" class="detalles">
+            <h2>
+              <ion-icon name="calendar"></ion-icon> {{ f.release }}
+            </h2>
+            <h3>
+              <ion-icon name="star-half"></ion-icon> {{ f.score }}
+            </h3>
+            <p>{{ f.synopsis }}</p>
+          </div>
+          <ion-button color="danger" expand="full" (click)="presentAlertConfirm(f.title)">Borrar</ion-button>
+        </div>
+      </ion-item>
+      <ion-item-divider></ion-item-divider>
+    </div>
+  </ion-list>
+</ion-content>

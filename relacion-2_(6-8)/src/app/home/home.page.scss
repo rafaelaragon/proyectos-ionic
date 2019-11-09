@@ -1,0 +1,37 @@
+ion-title {
+  font-weight: bolder;
+  text-align: center;
+}
+
+ion-content {
+  --ion-background-color: #03a3ff;
+  --color: #fff;
+  margin: 0 auto;
+}
+h1 {
+  color: white;
+  font-weight: bolder;
+}
+h2 {
+  color: white;
+  font-weight: bold;
+}
+h3 {
+  color: white;
+}
+p {
+  color: white;
+}
+ion-img {
+  width: 70vw;
+}
+ion-button {
+  margin: auto;
+}
+div {
+  display: inline-block ;
+}
+.detalles {
+  font-weight: bold;
+  margin: 2vw;
+}
