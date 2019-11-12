@@ -13,6 +13,7 @@ export class HomePage {
   films: Film[] = [];
   film: Film;
   isClicked: boolean = false;
+  index: number;
 
   constructor(
     private filmService: FilmService,
@@ -23,12 +24,10 @@ export class HomePage {
   }
   muestraDetalles(id: string) {
 
+    this.index = this.films.findIndex(f => f.title == id);
     this.film = this.filmService.getFilm(id);
     console.log(this.film);
-    if (!this.film.isClicked)
-      this.film.isClicked = true;
-    else
-      this.film.isClicked = false;
+    this.isClicked = !this.isClicked;
   }
   deleteFilm(id: string) {
     this.filmService.deleteFilm(id);

@@ -4,5 +4,4 @@ export class Film {
     cover: string;
     synopsis: string;
     title: string;
-    isClicked: boolean;
 }

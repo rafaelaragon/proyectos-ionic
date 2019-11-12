@@ -11,6 +11,7 @@ ion-content {
 h1 {
   color: white;
   font-weight: bolder;
+  text-align: center;
 }
 h2 {
   color: white;
@@ -24,12 +25,14 @@ p {
 }
 ion-img {
   width: 70vw;
+  margin: auto;
 }
 ion-button {
   margin: auto;
 }
 div {
   display: inline-block ;
+  width: 100%;
 }
 .detalles {
   font-weight: bold;
